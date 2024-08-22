@@ -34,10 +34,10 @@ class AuthCheack
             return $next($request);
         } elseif ($users->role === '2') {
             // สิทธิ์ user ในการเข้าถึง
-            return redirect()->route('logout')->with('fail', 'User role not defined');
+            return redirect()->route('logout')->with('fail', 'ไม่มีสิทธิ์');
         } else {
             // ผู้ใช้ไม่มีบทบาทที่ถูกกำหนด
-            return redirect()->route('homelogin')->with('fail', 'User role not defined');
+            return redirect()->route('homelogin')->with('fail', 'User ไม่ถูกต้อง');
         }
 
 

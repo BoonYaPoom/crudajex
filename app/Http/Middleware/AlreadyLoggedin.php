@@ -15,7 +15,7 @@ class AlreadyLoggedin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Session()->has('loginId') && (route('homelogin')==$request->url() || route('homeregis')==$request->url())){
+        if(Session()->has('loginId') && (route('homelogin')==$request->url() ||  route('homeregis')==$request->url())){
             return back();
         }
         return $next($request);

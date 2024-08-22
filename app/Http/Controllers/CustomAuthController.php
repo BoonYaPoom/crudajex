@@ -21,8 +21,6 @@ class CustomAuthController extends Controller
         return view('Regis.registration');
     }
 
-
-
     public function homeregis(){
 
         return view('Regis.home');
@@ -55,9 +53,6 @@ class CustomAuthController extends Controller
 
     }
 
-
-
-
     public function loginUser(Request $request){
         $request->validate([
 
@@ -88,8 +83,6 @@ class CustomAuthController extends Controller
             return back()->with('fail','Something weong');
         }
     }
-
-
 
     public function adminpage(){
 
